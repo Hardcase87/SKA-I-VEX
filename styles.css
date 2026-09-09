@@ -42,6 +42,7 @@ body::selection {
 img,
 video {
   display: block;
+  height: auto;
   max-width: 100%;
 }
 
@@ -434,6 +435,13 @@ a {
   position: relative;
   margin: 0;
   box-shadow: 28px 32px 0 rgba(34, 43, 47, 0.5), 0 45px 100px rgba(0, 0, 0, 0.45);
+}
+
+.album-cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .album-cover::after {
