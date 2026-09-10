@@ -305,6 +305,19 @@ a {
   color: var(--black);
 }
 
+.button-spotify {
+  color: #050607;
+  background: #1ed760;
+  border-color: #1ed760;
+}
+
+.button-spotify:hover,
+.button-spotify:focus-visible {
+  color: #050607;
+  background: #3be477;
+  border-color: #3be477;
+}
+
 .launch-lockup {
   display: flex;
   align-items: center;
@@ -758,6 +771,13 @@ a {
 .final-call h2 {
   margin-bottom: 2.4rem;
   font-size: clamp(5rem, 13vw, 13rem);
+}
+
+.final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
 }
 
 .site-footer {
