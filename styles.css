@@ -422,10 +422,6 @@ a {
   padding: clamp(6rem, 12vw, 11rem) 0;
 }
 
-.section[id] {
-  scroll-margin-top: 76px;
-}
-
 .section-heading {
   display: flex;
   align-items: baseline;
@@ -822,10 +818,6 @@ a {
 @media (max-width: 900px) {
   .site-header {
     min-height: 64px;
-  }
-
-  .section[id] {
-    scroll-margin-top: 64px;
   }
 
   .menu-button {
