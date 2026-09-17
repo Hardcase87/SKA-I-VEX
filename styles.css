@@ -318,6 +318,19 @@ a {
   border-color: #3be477;
 }
 
+.button-apple {
+  color: #050607;
+  background: var(--bone);
+  border-color: var(--bone);
+}
+
+.button-apple:hover,
+.button-apple:focus-visible {
+  color: var(--bone);
+  background: transparent;
+  border-color: var(--bone);
+}
+
 .launch-lockup {
   display: flex;
   align-items: center;
@@ -435,6 +448,91 @@ a {
   font-family: var(--display);
   font-size: 1.25rem;
   letter-spacing: 0.12em;
+}
+
+.single-release {
+  position: relative;
+}
+
+.single-release::before {
+  content: "";
+  position: absolute;
+  top: 8%;
+  right: -10vw;
+  width: 58vw;
+  height: 58vw;
+  background: radial-gradient(circle, rgba(143, 17, 14, 0.14), transparent 68%);
+  pointer-events: none;
+}
+
+.single-release-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.05fr) minmax(220px, 0.55fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: center;
+}
+
+.single-art {
+  position: relative;
+  margin: 0;
+  box-shadow: 24px 28px 0 rgba(75, 17, 16, 0.34), 0 45px 100px rgba(0, 0, 0, 0.5);
+}
+
+.single-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.single-art::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid rgba(240, 236, 230, 0.22);
+  pointer-events: none;
+}
+
+.single-copy h2 {
+  margin: 0 0 1.6rem;
+  font-family: var(--display);
+  font-size: clamp(3.7rem, 7.5vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+.single-copy .button {
+  margin-top: 1.3rem;
+}
+
+.launch-short {
+  position: relative;
+  width: min(100%, 340px);
+  margin: 0;
+  justify-self: end;
+  border: 1px solid rgba(240, 236, 230, 0.25);
+  background: #101518;
+  box-shadow: 18px 22px 0 rgba(34, 43, 47, 0.38);
+}
+
+.launch-short video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+.launch-short figcaption {
+  padding: 0.75rem 0.9rem;
+  color: var(--mist);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .release-grid {
@@ -765,7 +863,7 @@ a {
   text-align: center;
   background:
     linear-gradient(rgba(5, 6, 7, 0.68), rgba(5, 6, 7, 0.92)),
-    url("assets/skadi-warpaint.webp") center 32% / cover no-repeat;
+    url("assets/skadi-volcanic-banner.webp") center 42% / cover no-repeat;
 }
 
 .final-call h2 {
@@ -913,10 +1011,31 @@ a {
   }
 
   .release-grid,
+  .single-release-grid,
   .story,
   .film,
   .ritual {
     grid-template-columns: 1fr;
+  }
+
+  .single-release-grid {
+    gap: 3.5rem;
+  }
+
+  .single-art {
+    width: min(88vw, 580px);
+    margin: 0 auto;
+    box-shadow: 15px 18px 0 rgba(75, 17, 16, 0.34);
+  }
+
+  .single-copy h2 {
+    font-size: clamp(3.7rem, 17vw, 7rem);
+  }
+
+  .launch-short {
+    width: min(72vw, 340px);
+    margin: 0 auto;
+    justify-self: center;
   }
 
   .album-cover {
